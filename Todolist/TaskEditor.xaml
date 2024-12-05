@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Todolist.TaskEditor" Title="TaskEditor">
+    
+    <StackLayout Padding="10">
+        <Label Text="Descripción"/>
+        <Entry Text="{Binding Description}" Placeholder="Descripción (máx. 20 caracteres)" MaxLength="20"/>
+
+        <Label Text="Prioridad"/>
+        <Entry Text="{Binding Priority}" Keyboard="Numeric" Placeholder="Prioridad"/>
+
+        <Label Text="Objetivo"/>
+        <Entry Text="{Binding Objective}" Placeholder="Dos palabras cortas"/>
+
+        <Button Text="Guardar" Clicked="SaveTask"/>
+        <Button Text="Eliminar" Clicked="DeleteTask"/>
+    </StackLayout>
+</ContentPage>
